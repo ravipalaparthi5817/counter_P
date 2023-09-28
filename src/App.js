@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
 
-function App() {
+function App()
+ {
+  const [text, settext] = useState(0);
+  const incval=()=>
+  {
+    settext(text+1)
+  }
+  const decval=()=>
+  {
+    settext(text-1)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+       <h1>Number Counter</h1>
+       <b><button onClick={incval}>
+        <h1>press</h1>
+        <h1>To</h1>INCREMENT</button></b>
+       <h2>{text}</h2>
+      <b><button onClick={decval}><h1>press</h1><h1>To</h1>DECREMENT</button></b>
     </div>
+
   );
 }
-
 export default App;
